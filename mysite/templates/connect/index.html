@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="{% static 'css/connect.css' %}">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Добро пожаловать в наш чат!</h1>
+        <p>Нажмите на кнопку ниже, чтобы начать общение:</p>
+        <a href="{% url 'register' %}" class="start-chat-btn">Начать общение</a>
+    </div>
+</body>
+</html>

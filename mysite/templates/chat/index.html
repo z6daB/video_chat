@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Чат-комнаты</title>
+    {% block link %}<link rel="stylesheet" href="{% static 'css/styles.css' %}">{% endblock link %}
+</head>
+<body>
+    {% block content %}
+    <header>
+        <a href="{% url 'logout' %}" id="logout-link">
+            <input id="logout-button" type="button" value="Выйти из аккаунта">
+        </a>
+    </header>
+        <div class="container">
+            <h1>В какую чат-комнату вы хотите войти?</h1>
+            <input id="room-name-input" type="text" size="100" placeholder="Введите название комнаты"><br>
+            <input id="room-name-submit" type="button" value="Войти">
+        </div>
+
+        <script src="{% static 'js/lobby.js' %}"></script>
+    {% endblock content %}
+</body>
+</html>
